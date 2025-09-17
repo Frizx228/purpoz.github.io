@@ -1,0 +1,163 @@
+<!--
+  Twitch stream landing page for Purpoz
+  Save as: index.html
+-->
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Purpoz — Twitch Stream</title>
+  <meta name="description" content="Purpoz — игровой Twitch-стрим, общение и контент" />
+
+  <style>
+    :root{
+      --accent: #9146FF; /* Twitch purple */
+      --muted: #6b7280;
+      --bg: #0e0e10;
+      --card: #18181b;
+      --radius: 14px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#f4f4f5;line-height:1.55}
+
+    header{background:#18181b;position:sticky;top:0;z-index:40;border-bottom:1px solid #2e2e31}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .logo{width:44px;height:44px;border-radius:12px;background:var(--accent);display:inline-grid;place-items:center;color:white;font-weight:800;font-size:20px}
+
+    nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    nav a{color:#f4f4f5;text-decoration:none;padding:8px 12px;border-radius:8px;transition:.2s}
+    nav a:hover{background:rgba(145,70,255,0.15)}
+
+    .hero{padding:70px 0;display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:center}
+    .hero h1{font-size:36px;margin:0 0 12px;color:white}
+    .hero p{margin:0 0 20px;color:var(--muted)}
+    .cta{display:inline-block;background:var(--accent);color:white;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600;transition:.2s}
+    .cta:hover{opacity:.9}
+
+    .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 6px 18px rgba(0,0,0,0.3)}
+    .card h3{margin-top:0;color:white}
+
+    .grid{display:grid;gap:20px}
+    .features{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:40px 0}
+
+    footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid #2e2e31;margin-top:50px}
+
+    .rules li{margin-bottom:8px}
+
+    .donate,.setup,.content,.commands,.topdonors{margin-top:50px}
+
+    img.responsive{max-width:100%;border-radius:var(--radius)}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">P</div>
+        <div>Purpoz</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">О канале</a></li>
+          <li><a href="#rules">Правила</a></li>
+          <li><a href="#setup">Железо</a></li>
+          <li><a href="#content">Контент</a></li>
+          <li><a href="#commands">Команды</a></li>
+          <li><a href="#donate">Поддержка</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero" id="about">
+      <div>
+        <h1>Приветствую на моем канале!</h1>
+        <p>Меня зовут Саша, но можешь называть меня <strong style="color:var(--accent)">Purpoz</strong>. Мне 27, с раннего детства люблю компьютерные игры. На моём канале ты увидишь разнообразный контент — от ретро-игр до аниме. Люблю сложные игры и могу просидеть на одном боссе много часов.</p>
+        <a class="cta" href="https://www.twitch.tv/purp0z" target="_blank">Смотреть стрим</a>
+      </div>
+      <aside>
+        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/hosted_images/TwitchGlitchPurple.png" alt="Twitch logo" class="responsive" />
+      </aside>
+    </section>
+
+    <section id="rules" class="card">
+      <h3>📜 Правила чата</h3>
+      <ul class="rules">
+        <li>Уважайте себя, стримера и других зрителей.</li>
+        <li>Запрещено обсуждать религию и политику.</li>
+        <li>Мат разрешён умеренно — не засоряйте чат.</li>
+        <li>Никаких переходов на личности, за оскорбления — мут.</li>
+        <li>Без флуда и призывов к нему.</li>
+        <li>Запрещена реклама и спам.</li>
+      </ul>
+    </section>
+
+    <section id="donate" class="donate card">
+      <h3>💜 Поддержи стримера</h3>
+      <p>Без SMS и регистрации — любая поддержка помогает каналу развиваться.</p>
+      <a class="cta" href="https://www.donationalerts.com/r/purp0z" target="_blank">Задонатить</a>
+    </section>
+
+    <section id="setup" class="setup">
+      <h3>⚙️ Мой сетап</h3>
+      <div class="features grid">
+        <div class="card">Intel Core i7-8700K</div>
+        <div class="card">MSI GeForce RTX 2060 Gaming Z</div>
+        <div class="card">Corsair Vengeance LPX DDR4 16Gb</div>
+        <div class="card">ASUS TUF B360M-PLUS Gaming</div>
+        <div class="card">Samsung 970 EVO Plus 1Tb</div>
+        <div class="card">Thermaltake Toughpower GX1 700W</div>
+        <div class="card">Blue Yeti (микрофон)</div>
+        <div class="card">Logitech C922 Pro Stream (вебка)</div>
+      </div>
+    </section>
+
+    <section id="content" class="content card">
+      <h3>🎮 Контент</h3>
+      <p>Стараюсь заливать все прохождения игр и делать нарезки.</p>
+    </section>
+
+    <section id="commands" class="commands card">
+      <h3>⚡ Команды чата</h3>
+      <p><code>!телега</code>, <code>!ютуб</code>, <code>!up</code>, <code>!игра</code>, <code>!фоллоу</code>, <code>!шар</code>, <code>!рулетка</code>, <code>!сеппуку</code>, <code>!симпатия \"НИКНЕЙМ\"</code></p>
+    </section>
+
+    <section class="topdonors card">
+      <h3>🏆 Топ донатеры</h3>
+      <ul>
+        <li>Anton Panteleev — 1000 платиновых</li>
+        <li>kravzer0 — 400 золотых</li>
+        <li>frizplay — 400 золотых</li>
+        <li>wnpozer — 255 серебряных</li>
+        <li>EvahYan — 230 бронзовых</li>
+        <li>ECCEPSER — 100 каменных</li>
+        <li>seameanen — 100 каменных</li>
+        <li>Zeroignate0101 — 30 деревянных</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <div>© Purpoz — Twitch канал</div>
+      <div style="color:var(--muted);font-size:13px">Следи за обновлениями и приходи на стрим!</div>
+    </div>
+  </footer>
+
+</body>
+</html>
